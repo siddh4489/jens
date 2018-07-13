@@ -39,7 +39,8 @@ public class AwsService {
 
         String output = "Jersey say : " + msg;
         JenkinsServer jenkins = new JenkinsServer(new URI("http://10.150.0.181:8088/job/GSP/job/Indirect/job/PartnerEnroll_To_OpptyReg_QuoteSubmit/lastBuild/consoleText"), "executor", "executor");
-        return Response.status(201).entity(jenkins.getJobXml("PartnerEnroll_To_OpptyReg_QuoteSubmit")).build();
+        //return Response.status(201).entity(jenkins.getJobXml("PartnerEnroll_To_OpptyReg_QuoteSubmit")).build();
+        return Response.status(201).entity(output).build();
     }
 
     @POST
