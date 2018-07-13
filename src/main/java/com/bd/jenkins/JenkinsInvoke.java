@@ -19,7 +19,7 @@ import java.util.Map;
 public class JenkinsInvoke {
     public static String getLog() throws URISyntaxException, IOException {
         JenkinsServer jenkins = new JenkinsServer(new URI("http://10.150.0.181:8088/job/GSP/job/Indirect/job/PartnerEnroll_To_OpptyReg_QuoteSubmit/lastBuild/consoleText"), "executor", "executor");
-        string logs =  jenkins.getJobXml("PartnerEnroll_To_OpptyReg_QuoteSubmit");
+        String logs =  jenkins.getJobXml("PartnerEnroll_To_OpptyReg_QuoteSubmit");
         return logs;
     }
     
