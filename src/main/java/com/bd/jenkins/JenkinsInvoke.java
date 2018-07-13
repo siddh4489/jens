@@ -17,10 +17,10 @@ import java.util.Map;
  * @author Siddhrajsinh_Atodari
  */
 public class JenkinsInvoke {
-    public static void main(String[] args) throws URISyntaxException, IOException {
+    public static String getLog() throws URISyntaxException, IOException {
         JenkinsServer jenkins = new JenkinsServer(new URI("http://10.150.0.181:8088/job/GSP/job/Indirect/job/PartnerEnroll_To_OpptyReg_QuoteSubmit/lastBuild/consoleText"), "executor", "executor");
-        System.out.println("--->"+jenkins);
-        System.out.println("--->"+jenkins.getJobXml("Indirect"));
+        string logs =  jenkins.getJobXml("PartnerEnroll_To_OpptyReg_QuoteSubmit");
+        return logs;
     }
     
 }
