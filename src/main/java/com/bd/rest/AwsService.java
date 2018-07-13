@@ -5,6 +5,7 @@
  */
 package com.bd.rest;
 
+import com.bd.jenkins.JenkinsInvoke;
 import com.offbytwo.jenkins.JenkinsServer;
 import java.net.URI;
 import java.sql.Connection;
