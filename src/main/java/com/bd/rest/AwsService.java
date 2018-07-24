@@ -40,10 +40,10 @@ public class AwsService {
     public Response getMsg(@PathParam("param") String msg) throws IOException, URISyntaxException {
 
         String output = "Jersey say : " + msg;
-        //JenkinsServer jenkins = new JenkinsServer(new URI("http://10.150.0.181:8088/job/GSP/job/Indirect/job/PartnerEnroll_To_OpptyReg_QuoteSubmit/lastBuild/consoleText"), "executor", "executor");
+        JenkinsServer jenkins = new JenkinsServer(new URI("http://10.150.0.181:8088/job/GSP/job/Indirect/job/PartnerEnroll_To_OpptyReg_QuoteSubmit/lastBuild/consoleText"), "executor", "executor");
         //System.out.println("-->"+JenkinsInvoke.getLog());
-        //return Response.status(201).entity(JenkinsInvoke.getLog()).build();  
-        return Response.status(201).entity(output).build();
+        return Response.status(201).entity(jenkins.toString()).build();  
+        //return Response.status(201).entity(output).build();
     }
 
     @POST
